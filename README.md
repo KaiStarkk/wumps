@@ -2,6 +2,8 @@
 
 ### For \*arr users with power bills!
 
+[![Build and Push Docker Image](https://github.com/KaiStarkk/powarr/actions/workflows/docker-image.yml/badge.svg)](https://github.com/KaiStarkk/powarr/actions/workflows/docker-image.yml)
+
 ![image](https://user-images.githubusercontent.com/1722064/229331427-d552de32-068a-4a0a-a0c3-e960761fb23c.png)
 
 When starting out with self-hosted media servers, many users run \*arr apps on their personal machines. It's not uncommon to have Windows services installed for Sonarr, Radarr, Readarr, Prowlarr, Jellyfin, Audiobookshelf, Jellyseerr, VueTorrent, Dashy... and the like.
