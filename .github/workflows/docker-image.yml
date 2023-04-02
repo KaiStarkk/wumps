@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
   build-and-push:
@@ -25,9 +22,13 @@ jobs:
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
+    - name: Generate Timestamp
+      id: timestamp
+      run: echo "::set-output name=timestamp::$(date +%s)"
+
     - name: Build and Push Docker Image
       uses: docker/build-push-action@v2
       with:
         context: .
         push: true
-        tags: kaistarkk/powarr:$(date +%s)
+        tags: kaistarkk/powarr:${{ steps.timestamp.outputs.timestamp }}
