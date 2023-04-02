@@ -2,6 +2,8 @@
 
 ### For \*arr users with power bills!
 
+![image](https://user-images.githubusercontent.com/1722064/229331367-91cca053-6d0b-49a0-9e86-94ad725cc482.png)
+
 When starting out with self-hosted media servers, many users run \*arr apps on a personal machines. It's not uncommon to have services installed for Sonarr, Radarr, Readarr, Prowlarr, Jellyfin, Audiobookshelf, Jellyseerr, VueTorrent, Dashy, and the like.
 
 This can be inefficient, as personal computers (let's be honest, _gaming computers_) run on power-intensive hardware, and are wasting energy while idle if not in use. This is compounded when the computer is left on 24/7 _in case_ you might need to add something to a DVR or watch 15 minutes of a show on lunch break.
@@ -26,10 +28,11 @@ The recommended method of exposing this application to the internet is to use a 
 
 ## Roadmap
 
--   [] Improve install instructions
--   [] Save configuration from the dashboard
--   [] Switch between multiple saved hosts (tiles?)
--   [] Check for updates
+-   [ ] Improve install instructions
+-   [ ] Save configuration from the dashboard
+-   [ ] Add authentication
+-   [ ] Switch between multiple saved hosts (tiles?)
+-   [ ] Check for updates
 
 ## Contributing
 
