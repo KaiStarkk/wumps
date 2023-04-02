@@ -1,0 +1,27 @@
+body {
+	background-color: #222 !important;
+}
+
+.status-indicator {
+    font-size: 1.2rem;
+}
+
+.toast {
+    min-width: 200px;
+}
+
+.btn-purple {
+	background-color: purple;
+	color: white;
+}
+
+.btn-orange {
+	background-color: orange;
+	color: white;
+}
+
+.text-input {
+  background-color: #222222 !important;
+  color: #ccc !important;
+}
+

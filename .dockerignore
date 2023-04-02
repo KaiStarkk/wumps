@@ -1,0 +1,7 @@
+# git
+.git
+.gitattributes
+.gitignore
+
+# Python
+__pycache__
