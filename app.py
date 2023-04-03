@@ -1,9 +1,15 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, request
 from wakeonlan import send_magic_packet
 from ping3 import ping
-from config import DEFAULT_HOST, DEFAULT_MAC, DEFAULT_DESTINATION
+from configparser import ConfigParser
 
 app = Flask(__name__)
+config = ConfigParser()
+config.read('config.ini')
+
+DEFAULT_HOST = config['DEFAULTS']['DEFAULT_HOST']
+DEFAULT_MAC = config['DEFAULTS']['DEFAULT_MAC']
+DEFAULT_DESTINATION = config['DEFAULTS']['DEFAULT_DESTINATION']
 
 # helper function
 
@@ -20,7 +26,7 @@ def reverse_mac(mac):
 
 @app.route('/')
 def index():
-    return render_template('index.html',
+    return render_template('index.jinja',
                            app=app,
                            default_host=DEFAULT_HOST,
                            default_mac=DEFAULT_MAC,
@@ -31,10 +37,21 @@ def index():
 
 @app.route('/save', methods=['POST'])
 def save():
-    data = request.form['data']
-    with open('conflict.txt', 'w') as f:
-        f.write(data)
-    return 'Data saved!'
+    new_hostIP = request.form['hostIP']
+    new_mac = request.form['mac-address']
+    new_destination = request.form['destination']
+
+    config['DEFAULTS'] = {
+        'DEFAULT_HOST': new_hostIP,
+        'DEFAULT_MAC': new_mac,
+        'DEFAULT_DESTINATION': new_destination
+    }
+
+    with open('config.ini', 'w') as configfile:
+        config.write(configfile)
+
+    # Return a simple JSON response with a 200 status code
+    return jsonify({'message': 'Config saved successfully'}), 200
 
 # API endpoints
 

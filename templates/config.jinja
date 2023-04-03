@@ -1,0 +1,24 @@
+<button id="toggle-form-btn" class="btn btn-secondary mt-3">
+    <i class="fas fa-cog"></i>
+</button>
+
+<form id="config-form" class="d-none">
+    <div class="form-group">
+        <label for="hostIP" class="mb-3">Host IP (for status):</label>
+        <input type="text" id="hostIP" name="hostIP" class="form-control mb-4" value="{{ default_host }}" />
+    </div>
+
+    <div class="form-group">
+        <label for="mac-address" class="mb-3">MAC Address (SOL/WOL target):</label>
+        <input type="text" id="mac-address" name="mac-address" class="form-control mb-4" value="{{ default_mac }}" />
+    </div>
+
+    <div class="form-group">
+        <label for="destination" class="mb-3">'Go' Target:</label>
+        <input type="text" id="destination" name="destination" class="form-control mb-4" value="{{ default_destination }}" />
+    </div>
+
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">Save Config</button>
+    </div>
+</form>

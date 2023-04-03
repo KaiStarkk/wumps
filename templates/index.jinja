@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WUMPS - Web Utility for Managing Power States</title>
+        {% include "head.jinja" %}
+    </head>
+
+    <body class="text-white-50 d-flex flex-column h-100">
+        <div
+            class="container-fluid flex-grow-1 d-flex flex-column justify-content-center align-items-center"
+        >
+            {% include "header.jinja" %}
+            {% include "buttons.jinja" %}
+            {% include "status.jinja" %}
+            {% include "goto.jinja" %}
+            {% include "toasts.jinja" %}
+            {% include "config.jinja" %}
+        </div>
+
+        {% include "scripts.jinja" %}
+
+    </body>
+
+</html>
