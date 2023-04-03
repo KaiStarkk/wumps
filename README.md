@@ -22,7 +22,7 @@ NOTE: This app is intended to be installed on a lightweight client such as an ol
 
 1. Pull the latest image, build, and start the app using
 
-`docker run -p --network host kaistarkk/wumps`
+`docker run -d --restart always --network host kaistarkk/wumps`
 
 2. Install [SleepOnLan](https://github.com/SR-G/sleep-on-lan) on any target machines that you need to be able to hibernate as well as wake.
 
