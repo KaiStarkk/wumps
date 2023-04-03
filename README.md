@@ -1,8 +1,10 @@
-# Powarr
+# WUMPS
+
+## Web Utility for Managing Power States
 
 ### For \*arr users with power bills!
 
-[![Build and Push Docker Image](https://github.com/KaiStarkk/powarr/actions/workflows/docker-image.yml/badge.svg)](https://github.com/KaiStarkk/powarr/actions/workflows/docker-image.yml)
+[![Build and Push Docker Image](https://github.com/KaiStarkk/wumps/actions/workflows/docker-image.yml/badge.svg)](https://github.com/KaiStarkk/wumps/actions/workflows/docker-image.yml)
 
 ![image](https://user-images.githubusercontent.com/1722064/229331427-d552de32-068a-4a0a-a0c3-e960761fb23c.png)
 
@@ -18,7 +20,7 @@ This is a very simple app intended to provide a dashboard for powering personal 
 
 NOTE: This app is intended to be installed on a lightweight client such as an old Raspberry Pi, on the same local network as your media server<sup>_gaming computer_</sup>. If you happen to have an old RPI1/0 lying around, remember they run on ARMv6 so some extra work may be necessary to compile binaries.
 
-1. Pull the latest image, build, and start the app using `docker run -p 80:80 kaistarkk/powarr` creating a volume for the config file
+1. Pull the latest image, build, and start the app using `docker run -p 80:80 kaistarkk/wumps` creating a volume for the config file
 
 2. Modify config.py file (if you didn't create a volume above, use `docker cp` or `docker exec`)
 
@@ -56,4 +58,4 @@ If other contributors come on board, this will be converted to more conventional
 
 ## License
 
-Same as any other *arr software.
+Same as any other \*arr software.

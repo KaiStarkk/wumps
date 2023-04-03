@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Powarr - Wake/Sleep On LAN Dashboard</title>
+        <title>WUMPS - Web Utility for Managing Power States</title>
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -12,17 +12,23 @@
 
         <link href="/static/css/styles.css" rel="stylesheet" />
         <script src="/static/js/scripts.js"></script>
+        {% if app.debug %}
+        <script
+            type="text/javascript"
+            src="https://livejs.com/live.js"
+        ></script>
+        {% endif %}
     </head>
 
     <body class="text-white-50 d-flex flex-column h-100">
         <div
             class="container-fluid flex-grow-1 d-flex flex-column justify-content-center align-items-center"
         >
-            <h1 class="mt-5">Powarr</h1>
-            <h2 class="mb-5">Wake / Sleep on LAN Dashboard</h2>
+            <h1 class="mt-5">WUMPS</h1>
+            <h2 class="mb-5">Web Utility for Managing Power States</h2>
 
             <div class="form-group">
-                <label for="hostIP">Host IP:</label>
+                <label for="hostIP">Host IP (for status):</label>
                 <input
                     type="text"
                     class="form-control text-input"
@@ -31,7 +37,7 @@
                 />
             </div>
             <div class="form-group mt-3">
-                <label for="mac-address">MAC Address:</label>
+                <label for="mac-address">MAC Address (SOL/WOL target):</label>
                 <input
                     type="text"
                     class="form-control text-input"
@@ -73,6 +79,22 @@
                         class="btn btn-lg btn-primary"
                         value="Go to Host"
                     />
+                </form>
+            </div>
+
+            <div class="form-group mt-4">
+                <label for="default_destination">'Go' Target:</label>
+                <input
+                    type="text"
+                    class="form-control text-input"
+                    id="default_destination"
+                    value="{{ default_destination }}"
+                />
+            </div>
+
+            <div class="form-group mt-4">
+                <form method="POST" action="/save">
+                    <button type="submit">Save Config</button>
                 </form>
             </div>
 

@@ -15,7 +15,7 @@ COPY . /app
 EXPOSE 80
 
 # Define environment variable
-ENV POWARR=app.py
+ENV WUMPS=app.py
 
 # Run app.py when the container launches
-CMD ["flask", "run", "--host=0.0.0.0", "--port=80"]
+CMD ["python", "app.py"]

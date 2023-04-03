@@ -21,9 +21,20 @@ def reverse_mac(mac):
 @app.route('/')
 def index():
     return render_template('index.html',
+                           app=app,
                            default_host=DEFAULT_HOST,
                            default_mac=DEFAULT_MAC,
                            default_destination=DEFAULT_DESTINATION)
+
+# Saving route
+
+
+@app.route('/save', methods=['POST'])
+def save():
+    data = request.form['data']
+    with open('conflict.txt', 'w') as f:
+        f.write(data)
+    return 'Data saved!'
 
 # API endpoints
 
@@ -62,4 +73,4 @@ def state(ip):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=9008)
