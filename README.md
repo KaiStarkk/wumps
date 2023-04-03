@@ -30,8 +30,9 @@ The recommended method of exposing this application to the internet is to use a 
 
 ## Roadmap
 
--   [ ] Improve install instructions
--   [ ] Save configuration from the dashboard
+-   [X] Improve install instructions
+-   [X] Save configuration from the dashboard
+-   [X] Tidy up UI for changing configuration
 -   [ ] Add authentication
 -   [ ] Switch between multiple saved hosts (tiles?)
 -   [ ] Check for updates
