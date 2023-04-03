@@ -5,11 +5,6 @@ from configparser import ConfigParser
 
 app = Flask(__name__)
 config = ConfigParser()
-config.read('config.ini')
-
-DEFAULT_HOST = config['DEFAULTS']['DEFAULT_HOST']
-DEFAULT_MAC = config['DEFAULTS']['DEFAULT_MAC']
-DEFAULT_DESTINATION = config['DEFAULTS']['DEFAULT_DESTINATION']
 
 # helper function
 
@@ -26,6 +21,11 @@ def reverse_mac(mac):
 
 @app.route('/')
 def index():
+    config.read('config.ini')
+    DEFAULT_HOST = config['DEFAULTS']['DEFAULT_HOST']
+    DEFAULT_MAC = config['DEFAULTS']['DEFAULT_MAC']
+    DEFAULT_DESTINATION = config['DEFAULTS']['DEFAULT_DESTINATION']
+
     return render_template('index.jinja',
                            app=app,
                            default_host=DEFAULT_HOST,
