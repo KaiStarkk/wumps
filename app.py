@@ -25,7 +25,6 @@ def index():
     DEFAULT_HOST = config['DEFAULTS']['DEFAULT_HOST']
     DEFAULT_MAC = config['DEFAULTS']['DEFAULT_MAC']
     DEFAULT_DESTINATION = config['DEFAULTS']['DEFAULT_DESTINATION']
-
     return render_template('index.jinja',
                            app=app,
                            default_host=DEFAULT_HOST,
@@ -37,18 +36,21 @@ def index():
 
 @app.route('/save', methods=['POST'])
 def save():
-    new_hostIP = request.form['hostIP']
-    new_mac = request.form['mac-address']
-    new_destination = request.form['destination']
+    DEFAULT_HOST = request.form['hostIP']
+    DEFAULT_MAC = request.form['mac-address']
+    DEFAULT_DESTINATION = request.form['destination']
 
     config['DEFAULTS'] = {
-        'DEFAULT_HOST': new_hostIP,
-        'DEFAULT_MAC': new_mac,
-        'DEFAULT_DESTINATION': new_destination
+        'DEFAULT_HOST': DEFAULT_HOST,
+        'DEFAULT_MAC': DEFAULT_MAC,
+        'DEFAULT_DESTINATION': DEFAULT_DESTINATION
     }
 
     with open('config.ini', 'w') as configfile:
         config.write(configfile)
+
+    # Note that flask will still have cached the .ini file,
+    # so future gets to '/' will be reading from memory until the container restarts.
 
     # Return a simple JSON response with a 200 status code
     return jsonify({'message': 'Config saved successfully'}), 200
