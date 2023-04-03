@@ -18,7 +18,7 @@ This is a very simple app intended to provide a dashboard for powering personal 
 
 ## Installation
 
-NOTE: This app is intended to be installed on a lightweight client such as an old Raspberry Pi, on the same local network as your media server<sup>_gaming computer_</sup>. If you happen to have an old RPI1/0 lying around, remember they run on ARMv6 so some extra work may be necessary to compile binaries.
+NOTE: This app is intended to be installed on a lightweight client such as an old Raspberry Pi, on the same local network as your media server<sup>_gaming computer_</sup>. If you happen to have an old RPI1/0 lying around, remember they run on ARMv6 so some extra work may be necessary to compile binaries if you don't use docker.
 
 1. Pull the latest image, build, and start the app using
 
@@ -41,12 +41,10 @@ The recommended method of exposing this application to the internet is to use a 
 
 Current dependencies and stack:
 
--   Wakeonlan
--   ping3
-
+-   [SleepOnLan](https://github.com/SR-G/sleep-on-lan)
+-   Python3 (w/ wakeonlan, ping3, configparser)
 -   Flask
--   Python
--   Raw HTML/CSS/JS
+-   HTML/CSS/JS (jinja)
 -   Docker
 
 ## Support
