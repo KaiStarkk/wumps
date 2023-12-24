@@ -49,11 +49,7 @@ Current dependencies and stack:
 
 ## Support
 
-If you would like to support further development, firstly thank you! - the easiest way for now is:
-
-BTC: bc1qjq62jhmpr25dr63jacmaxzuh3qkr2ufsl7s6dw
-
-If other contributors come on board, this will be converted to more conventional GitHub open source support methods.
+This app is given to the world freely as a Boddhisattva-like act. Go forth and love. 
 
 ## License
 
