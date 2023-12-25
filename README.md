@@ -28,6 +28,8 @@ NOTE: This app is intended to be installed on a lightweight client such as an ol
 
 The recommended method of exposing this application to the internet is to use a Cloudflare Zero Trust tunnel. See the `cloudflared` documentation for further details on setting up a tunnel.
 
+WUMPS runs on port 9008 by default.
+
 ## Roadmap
 
 -   [X] Improve install instructions
