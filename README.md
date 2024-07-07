@@ -49,10 +49,23 @@ Current dependencies and stack:
 -   HTML/CSS/JS (jinja)
 -   Docker
 
-## Support
-
-This app is given to the world freely as a Boddhisattva-like act. Go forth and love. 
-
 ## License
 
-Same as any other \*arr software.
+Gifted to the public domain in a Boddhisattva-like act.
+For jurisdictions that don't permit gifting to the public domain, this software is licensed under BSD 0-clause:
+
+```
+Zero-Clause BSD
+=============
+
+Permission to use, copy, modify, and/or distribute this software for
+any purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED “AS IS” AND THE AUTHOR DISCLAIMS ALL
+WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE
+FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY
+DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN
+AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT
+OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+```
